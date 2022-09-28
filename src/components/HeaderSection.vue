@@ -2,11 +2,13 @@
   <header>
     <div class="fl-logobox h-100 px-5 d-flex align-items-center justify-content-between">
         <img src="../assets/img/logo.png" alt="logo">
-        <div class="input-group w-25">
-            <input type="text" class="form-control" placeholder="Cerca Film o Serie TV" v-model="searchText">
-            <button class="btn btn-danger" type="button" @click="$emit('sendInputText', searchText)">Cerca</button>
+        <div class="d-flex flex-end gap-3 w-25">
+            <div class="input-group">
+                <input type="text" class="form-control fs-4" placeholder="Cerca Film o Serie TV" v-model="searchText">
+                <button class="btn btn-danger" type="button" @click="$emit('sendInputText', searchText)">Cerca</button>
+            </div>
+            <button type="button" class="btn btn-danger">Accedi</button>
         </div>
-        <button type="button" class="btn btn-danger">Accedi</button>
     </div>
 
   </header>
