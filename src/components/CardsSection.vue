@@ -1,6 +1,7 @@
 <template>
   <section>
-    <img :src="baseUrl+arrayElement.poster_path" alt="cover">
+    <img v-if="arrayElement.poster_path" :src="baseUrl+arrayElement.poster_path" :alt="arrayElement.title ? arrayElement.title : arrayElement.name">
+    <img v-else src="../assets/img/no_poster.jpg" alt="Poster-not-available" class="fl-noposter">
   </section>
 </template>
 
@@ -20,6 +21,11 @@ export default {
 
   * {
     color: white;
+  }
+
+  .fl-noposter {
+    height: 450px;
+    width: 300px;
   }
 
 </style>

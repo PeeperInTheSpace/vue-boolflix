@@ -1,6 +1,6 @@
 <template>
     <main>
-        <section class="d-flex container flex-wrap mt-5 gap-5">
+        <section class="d-flex container justify-content-center flex-wrap mt-5 gap-5">
             <CardsSection :arrayElement="film" v-for="film in movies" :key="film.id"/>
             <CardsSection :arrayElement="serie" v-for="serie in series" :key="serie.id"/>
         </section>
