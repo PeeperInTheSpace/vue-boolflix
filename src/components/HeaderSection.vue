@@ -3,7 +3,7 @@
     <div class="fl-logobox px-5 d-flex align-items-center justify-content-between">
         <img src="../assets/img/logo.png" alt="logo">
         <div class="input-group w-25">
-            <input type="text" class="form-control fs-5" placeholder="Cerca Film o Serie TV" v-model="searchText">
+            <input type="text" class="form-control fs-5" placeholder="Cerca Film o Serie TV" v-model="searchText" @keyup.enter="$emit('sendInputText', searchText)">
             <button class="btn btn-danger" type="button" @click="$emit('sendInputText', searchText)">Cerca</button>
         </div>
     </div>
