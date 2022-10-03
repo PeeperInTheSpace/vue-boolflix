@@ -35,6 +35,11 @@ export default {
 
             img {
             height: 80px;
+
+                &:hover {
+                    transition: all 1s;
+                    filter: drop-shadow(0 0 1.5rem red);
+                }
             }
 
             button {
